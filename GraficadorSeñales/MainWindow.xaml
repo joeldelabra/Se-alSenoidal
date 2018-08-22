@@ -29,7 +29,9 @@
             <TextBlock x:Name="Amplitud1_Copy1" HorizontalAlignment="Left" Margin="371,149,0,0" TextWrapping="Wrap" Text="Frecuencia de muestreo" VerticalAlignment="Top" RenderTransformOrigin="1.55,0.313"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="371,178,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="120"/>
             <Button Content="GRAFICAR" HorizontalAlignment="Left" Margin="245,238,0,0" VerticalAlignment="Top" Width="75"/>
-            <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="39,283,0,0" VerticalAlignment="Top" Width="511"/>
+            <ScrollViewer HorizontalAlignment="Left" Height="190" Margin="39,283,0,0" VerticalAlignment="Top" Width="511" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+                <Polyline Stroke="DeepSkyBlue" StrokeThickness="3" Name="plnGrafica"/>
+            </ScrollViewer>
 
         </Grid>
 

@@ -24,18 +24,28 @@ namespace GraficadorSeñales
         {
             InitializeComponent();
 
-            plnGrafica.Points.Add(new Point(0,   10));
-            plnGrafica.Points.Add(new Point(50,  20));
-            plnGrafica.Points.Add(new Point(150, 10));
-            plnGrafica.Points.Add(new Point(200, 50));
-            plnGrafica.Points.Add(new Point(250, 10));
-            plnGrafica.Points.Add(new Point(300, 100));
-            plnGrafica.Points.Add(new Point(400, 200));
-            plnGrafica.Points.Add(new Point(500, 350));
-            plnGrafica.Points.Add(new Point(700, 100));
-            plnGrafica.Points.Add(new Point(900, 200));
 
 
+        }
+
+        private void btnGraficar_Click(object sender, RoutedEventArgs e)
+        {
+            double Amplitud = double.Parse(txtAmplitud.Text);
+            double Fase = double.Parse(txtFase1.Text);
+            double Frecuencia = double.Parse(txtFrecuencia.Text);
+            double TiempoInicial = double.Parse(txtTiempoInicial.Text);
+            double TiempoFinal = double.Parse(txtTiempoFinal.Text);
+            double Muestreo = double.Parse(txtMuestreo.Text);
+
+            SenalSenoidal senal = new SenalSenoidal(Amplitud, Fase, Frecuencia);
+
+            double periodoMuestreo = 1 / Muestreo;
+            plnGrafica.Points.Clear();
+
+            for (double i = TiempoInicial; i<=TiempoFinal; i+= periodoMuestreo)
+            {
+                plnGrafica.Points.Add(new Point(i*Scroll.Width, (senal.evaluar(i)*((Scroll.Height/2.0)-30) * -1) + (Scroll.Height / 2.0)));
+            }
         }
     }
 }

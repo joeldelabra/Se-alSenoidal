@@ -59,9 +59,45 @@ namespace GraficadorSeñales
             // Recorrer una coleccion o arreglo
             foreach (Muestra muestra in senal.muestras)
             {
-              /*   plnGrafica.Points.Add(
-                 new Point(muestra.X *Scroll.Width, (muestra.Y
-                 * ((Scroll.Height/2.0)  + (Scroll.Height / 2.0))); */
+                plnGrafica.Points.Add(new Point(muestra.X * Scroll.Width, (muestra.Y / senal.AmplitudMaxima *
+                    ((Scroll.Height / 2)) - 30) * -1 + (Scroll.Height / 2)));
+            }
+
+            lblAmplitudMaximaPositiva.Text = senal.AmplitudMaxima.ToString();
+            lblAmplitudMaximaNegativa.Text = " - " + senal.AmplitudMaxima.ToString();
+        }
+
+        private void btnRampa_Click(object sender, RoutedEventArgs e)
+        {
+            double tiempoInicial = double.Parse(txtTiempoInicial.Text);
+            double tiempoFinal = double.Parse(txtTiempoFinal.Text);
+            double frecuenciaMuestreo = double.Parse(txtMuestreo.Text);
+
+            Rampa Rampa = new Rampa();
+
+            plnGrafica.Points.Clear();
+
+            double periodoMuestreo = 1 / frecuenciaMuestreo;
+            for (double i = tiempoInicial; i <= tiempoFinal; i += periodoMuestreo)
+            {
+                double valorMuestra = Rampa.evaluar(i);
+
+                if (Math.Abs(valorMuestra) > Rampa.AmplitudMaxima)
+                {
+                    Rampa.AmplitudMaxima = Math.Abs(valorMuestra);
+                }
+
+                Rampa.Muestras.Add(new Muestra(i, valorMuestra));
+
+            }
+
+
+            //Recorrer una colección o arreglo
+            //La variable muestra guarda cada elemento de la colección de: señal.Muestra
+            foreach (Muestra muestra in Rampa.Muestras)
+            {
+                plnGrafica.Points.Add(new Point(muestra.X * Scroll.Width, (muestra.Y *
+                    ((Scroll.Height / 2)) - 30) * -1 + (Scroll.Height / 2)));
             }
         }
     }

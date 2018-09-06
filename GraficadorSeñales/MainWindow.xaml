@@ -29,8 +29,12 @@
             <TextBlock x:Name="Muestreo" HorizontalAlignment="Left" Margin="371,149,0,0" TextWrapping="Wrap" Text="Frecuencia de muestreo" VerticalAlignment="Top" RenderTransformOrigin="1.55,0.313"/>
             <TextBox x:Name="txtMuestreo" HorizontalAlignment="Left" Height="23" Margin="371,178,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="120"/>
             <Button x:Name="btnGraficar" Content="GRAFICAR" HorizontalAlignment="Left" Margin="151,238,0,0" VerticalAlignment="Top" Width="75" Click="btnGraficar_Click"/>
-            <ScrollViewer x:Name="Scroll" HorizontalAlignment="Left" Height="190" Margin="119,283,0,0" VerticalAlignment="Top" Width="431" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
-                <Polyline Stroke="blue" StrokeThickness="3" Name="plnGrafica"/>
+            <ScrollViewer x:Name="Scroll" HorizontalAlignment="Left" Height="218" Margin="119,283,0,0" VerticalAlignment="Top" Width="431" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+                <Grid>
+                <Polyline Stroke="Black" StrokeThickness="3" Name="plnGrafica"/>
+                <Polyline Stroke="Red" StrokeThickness="0.5" Name="plnEjeX"/>
+                <Polyline Stroke="Green" StrokeThickness="0.5" Name="plnEjeY"/>
+                </Grid>
             </ScrollViewer>
             <Button x:Name="btnRampa" Content="Graficar Rampa" HorizontalAlignment="Left" Margin="329,238,0,0" VerticalAlignment="Top" Width="98" Click="btnRampa_Click"/>
             <TextBlock x:Name="lblAmplitudMaximaPositiva" HorizontalAlignment="Left" Margin="26,270,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>

@@ -59,9 +59,30 @@ namespace GraficadorSeñales
             // Recorrer una coleccion o arreglo
             foreach (Muestra muestra in senal.muestras)
             {
-                plnGrafica.Points.Add(new Point(muestra.X * Scroll.Width, (muestra.Y / senal.AmplitudMaxima *
-                    ((Scroll.Height / 2)) - 30) * -1 + (Scroll.Height / 2)));
+                plnGrafica.Points.Add(new Point((muestra.X - TiempoInicial) * Scroll.Width, (muestra.Y / senal.AmplitudMaxima 
+                    * ((Scroll.Height / 2) - 30) * -1 + (Scroll.Height / 2))));
             }
+           
+
+            plnEjeX.Points.Clear();
+            // Punto de inicio
+            plnEjeX.Points.Add(new Point(0, (Scroll.Height / 2)));
+            // Punto final.
+            plnEjeX.Points.Add(new Point((TiempoFinal - TiempoInicial) * Scroll.Width, (Scroll.Height / 2)));
+
+
+            /*
+            
+            // EJE Y
+            plnEjeY.Points.Clear();
+            // Punto de inicio
+            plnEjeY.Points.Add(new Point(0, (Scroll.Height / 2)));
+            // Punto final.
+            plnEjeY.Points.Add(new Point((0 - TiempoInicial) * Scroll.Width, (senal.AmplitudMaxima
+                    * ((Scroll.Height / 2) - 30) * -1 + (Scroll.Height / 2))));
+                
+                   
+                    */
 
             lblAmplitudMaximaPositiva.Text = senal.AmplitudMaxima.ToString();
             lblAmplitudMaximaNegativa.Text = " - " + senal.AmplitudMaxima.ToString();

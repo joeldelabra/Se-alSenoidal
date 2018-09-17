@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace GraficadorSeñales
 {
-    class SenalSenoidal
+    class SenalSenoidal : Señal
     {
         public double Amplitud { get; set; }
         public double Fase { get; set; }
         public double Frecuencia { get; set; }
 
-        public List<Muestra> muestras { get; set; }
-        public double AmplitudMaxima { get; set; }
-
-
+   
         public SenalSenoidal()
         {
             Amplitud = 1.0;
@@ -35,7 +32,7 @@ namespace GraficadorSeñales
 
         }
 
-        public double evaluar(double tiempo)
+        override public double evaluar(double tiempo)
         {
             double resultado;
             resultado = Amplitud * Math.Sin

@@ -57,6 +57,7 @@
     <Compile Include="Muestra.cs" />
     <Compile Include="Rampa.cs" />
     <Compile Include="SenalSenoidal.cs" />
+    <Compile Include="Señal.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

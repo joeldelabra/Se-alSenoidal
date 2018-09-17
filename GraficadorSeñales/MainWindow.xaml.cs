@@ -37,31 +37,39 @@ namespace GraficadorSeñales
             double TiempoFinal = double.Parse(txtTiempoFinal.Text);
             double Muestreo = double.Parse(txtMuestreo.Text);
 
-            SenalSenoidal senal = new SenalSenoidal(Amplitud, Fase, Frecuencia);
+            Señal senal;
+            switch(cbTipoSeñal.SelectedIndex)
+            {
+                // Senoidal
+                case 0: senal =  new SenalSenoidal(Amplitud, Fase, Frecuencia);
+                    break;
+                case 1: senal = new Rampa();
+                    break;
+                default:
+                    senal = null;
+                    break;
+            }
 
-            double periodoMuestreo = 1 / Muestreo;
+            senal.TiempoInicial = TiempoInicial;
+            senal.TiempoFinal = TiempoFinal;
+            senal.ConstruirSeñalDigital();
+            senal.FrecuenciaMuestreo = Muestreo;
+
+               
             plnGrafica.Points.Clear();
 
-            for (double i = TiempoInicial;
-                i <= TiempoFinal;
-                i += periodoMuestreo)
+            if (senal != null)
             {
-                double Muestra = senal.evaluar(i);
-                if (Math.Abs(Muestra) > senal.AmplitudMaxima)
-                {
-                senal.AmplitudMaxima = Math.Abs(Muestra);
-                }
-                senal.muestras.Add(new Muestra(i, senal.evaluar(i)));
-
-              
-            }
-
-            // Recorrer una coleccion o arreglo
+             // Recorrer una coleccion o arreglo
             foreach (Muestra muestra in senal.muestras)
-            {
+                 {
                 plnGrafica.Points.Add(new Point((muestra.X - TiempoInicial) * Scroll.Width, (muestra.Y / senal.AmplitudMaxima 
                     * ((Scroll.Height / 2) - 30) * -1 + (Scroll.Height / 2))));
+                 }
+
             }
+
+          
            
 
             plnEjeX.Points.Clear();
@@ -71,18 +79,7 @@ namespace GraficadorSeñales
             plnEjeX.Points.Add(new Point((TiempoFinal - TiempoInicial) * Scroll.Width, (Scroll.Height / 2)));
 
 
-            /*
-            
-            // EJE Y
-            plnEjeY.Points.Clear();
-            // Punto de inicio
-            plnEjeY.Points.Add(new Point(0, (Scroll.Height / 2)));
-            // Punto final.
-            plnEjeY.Points.Add(new Point((0 - TiempoInicial) * Scroll.Width, (senal.AmplitudMaxima
-                    * ((Scroll.Height / 2) - 30) * -1 + (Scroll.Height / 2))));
-                
-                   
-                    */
+         
 
             lblAmplitudMaximaPositiva.Text = senal.AmplitudMaxima.ToString();
             lblAmplitudMaximaNegativa.Text = " - " + senal.AmplitudMaxima.ToString();

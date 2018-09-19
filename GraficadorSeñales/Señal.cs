@@ -29,7 +29,7 @@ namespace GraficadorSeñales
                 {
                     AmplitudMaxima = Math.Abs(Muestra);
                 }
-                muestras.Add(new Muestra(i, evaluar(i)));
+            //    muestras.Add(new Muestra(i, evaluar(i)));
 
 
             }

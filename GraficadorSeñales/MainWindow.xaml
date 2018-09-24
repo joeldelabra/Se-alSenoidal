@@ -29,13 +29,14 @@
             <TextBlock x:Name="lblAmplitudMaximaPositiva" HorizontalAlignment="Left" Margin="26,270,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
             <TextBlock x:Name="lblAmplitudMaximaNegativa" HorizontalAlignment="Left" Margin="26,471,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
             <TextBlock x:Name="lblAmplitudCero" HorizontalAlignment="Left" Margin="26,363,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+            <StackPanel x:Name="PanelConfiguracion" HorizontalAlignment="Left" Height="113" Margin="44,10,0,0" VerticalAlignment="Top" Width="494"/>
             <ComboBox x:Name="cbTipoSeñal" SelectedIndex="0" HorizontalAlignment="Left" Margin="307,243,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbTipoSeñal_SelectionChanged">
                 <ComboBoxItem>Señal Senoidal</ComboBoxItem>
                 <ComboBoxItem>Señal Rampa</ComboBoxItem>
-
+                <ComboBoxItem>Señal Exponencial</ComboBoxItem>
             </ComboBox>
             <TextBlock HorizontalAlignment="Left" Margin="307,222,0,0" TextWrapping="Wrap" Text="Tipo de señal." VerticalAlignment="Top"/>
-            <StackPanel x:Name="PanelConfiguracion" HorizontalAlignment="Left" Height="113" Margin="44,10,0,0" VerticalAlignment="Top" Width="494"/>
+          
 
         </Grid>
 

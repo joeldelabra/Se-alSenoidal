@@ -36,6 +36,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -54,13 +56,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ConfiguracionExponencial.xaml.cs">
+      <DependentUpon>ConfiguracionExponencial.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ConfiguracionSenalSenoidal.xaml.cs">
       <DependentUpon>ConfiguracionSenalSenoidal.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Exponencial.cs" />
     <Compile Include="Muestra.cs" />
     <Compile Include="Rampa.cs" />
     <Compile Include="SenalSenoidal.cs" />
     <Compile Include="Señal.cs" />
+    <Page Include="ConfiguracionExponencial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ConfiguracionSenalSenoidal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

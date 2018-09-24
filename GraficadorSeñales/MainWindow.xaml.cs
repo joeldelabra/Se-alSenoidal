@@ -41,15 +41,29 @@ namespace GraficadorSeñales
                 // Senoidal
                 case 0:
 
-               /*     double Amplitud = double.Parse(txtAmplitud.Text);
-                    double Fase = double.Parse(txtFase1.Text);
-                    double Frecuencia = double.Parse(txtFrecuencia.Text); */
+                    double Amplitud =
+                        double.Parse(((ConfiguracionSenalSenoidal)PanelConfiguracion.Children[0]).txtAmplitud.Text);
 
-                    senal =  new SenalSenoidal(5, 0, 8);
+                    double Fase =
+                        double.Parse(((ConfiguracionSenalSenoidal)PanelConfiguracion.Children[0]).txtFase1.Text);
+
+                    double Frecuencia =
+                        double.Parse(((ConfiguracionSenalSenoidal)PanelConfiguracion.Children[0]).txtFrecuencia.Text);
+
+                    senal =  new SenalSenoidal(Amplitud, Fase, Frecuencia);
                     break;
                 case 1: senal = new Rampa();
                     break;
+                case 2:
+                    double Alpha =
+                        double.Parse(((ConfiguracionExponencial)PanelConfiguracion.Children[0]).txtAlpha.Text);
+
+                    senal = new Exponencial (Alpha);
+                    
+                    break;
+
                 default:
+
                     senal = null;
                     break;
             }
@@ -57,7 +71,7 @@ namespace GraficadorSeñales
             senal.TiempoInicial = TiempoInicial;
             senal.TiempoFinal = TiempoFinal;
             senal.FrecuenciaMuestreo = Muestreo;
-            senal.ConstruirSeñalDigital();
+            senal.ConstruirSeñalDigital(); 
                
             plnGrafica.Points.Clear();
 
@@ -87,6 +101,7 @@ namespace GraficadorSeñales
             lblAmplitudMaximaNegativa.Text = " - " + senal.AmplitudMaxima.ToString();
         }
 
+        
         private void btnRampa_Click(object sender, RoutedEventArgs e)
         {
             double tiempoInicial = double.Parse(txtTiempoInicial.Text);
@@ -137,6 +152,10 @@ namespace GraficadorSeñales
                         );
                     break;
                 case 1:
+                    
+                    break;
+                case 2:
+                    PanelConfiguracion.Children.Add(new ConfiguracionExponencial());
                     break;
                 default:
                     break;

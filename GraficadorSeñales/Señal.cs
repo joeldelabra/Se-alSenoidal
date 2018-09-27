@@ -35,6 +35,37 @@ namespace GraficadorSeñales
             }
         }
 
+        public void escalar(double factor)
+        {
+            foreach(Muestra muestra in muestras)
+            {
+                muestra.Y *= factor ;
+            }
+        }
+
+        public void actualizarAmplitudMaxima()
+        {
+            AmplitudMaxima = 0;
+            foreach (Muestra muestra in muestras)
+            {
+                if (Math.Abs(muestra.Y) > AmplitudMaxima)
+                {
+                    AmplitudMaxima = Math.Abs(muestra.Y);
+                }
+            }
+        }
+        /**/
+
+        public void desplazar(double desplazamiento)
+        {
+            
+            foreach (Muestra muestra in muestras)
+            {
+                muestra.Y += desplazamiento ;
+            }
+        }
+
+        // checkbox.AutoCheck=false;
 
     }
 }

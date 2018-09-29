@@ -74,14 +74,19 @@ namespace GraficadorSeñales
             senal.ConstruirSeñalDigital();
 
             // Escalar
-            double factorEscala = double.Parse(txtAmplitud.Text);
-            senal.escalar(factorEscala);
-            
+            if ((bool)CheckEscalar.IsChecked)
+            {
+                double factorEscala = double.Parse(txtAmplitud.Text);
+                senal.escalar(factorEscala);
+            }
+                        
             // Desplazar.
-            double factorDesplazamiento = double.Parse(txtDesplazamiento.Text);
-            senal.desplazar(factorDesplazamiento);
-            senal.actualizarAmplitudMaxima();
-
+              if ((bool)CheckDesplazamiento.IsChecked)
+            {
+                double factorDesplazamiento = double.Parse(txtDesplazamiento.Text);
+                senal.desplazar(factorDesplazamiento);
+                senal.actualizarAmplitudMaxima();
+            }
                
             plnGrafica.Points.Clear();
 

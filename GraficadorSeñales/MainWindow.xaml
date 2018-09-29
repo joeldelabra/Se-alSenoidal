@@ -36,7 +36,7 @@
                 <ComboBoxItem>Señal Exponencial</ComboBoxItem>
             </ComboBox>
             <TextBlock HorizontalAlignment="Left" Margin="384,222,0,0" TextWrapping="Wrap" Text="Tipo de señal." VerticalAlignment="Top"/>
-            <CheckBox x:Name="CheckAmplitud" Content="" HorizontalAlignment="Left" Margin="540,151,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="CheckEscalar" Content="" HorizontalAlignment="Left" Margin="540,151,0,0" VerticalAlignment="Top"/>
             <CheckBox x:Name="CheckDesplazamiento" Content="" HorizontalAlignment="Left" Margin="700,154,0,0" VerticalAlignment="Top"/>
 
 

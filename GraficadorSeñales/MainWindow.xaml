@@ -11,7 +11,7 @@
             <ColumnDefinition Width="57*"/>
             <ColumnDefinition Width="529*"/>
         </Grid.ColumnDefinitions>
-        <Grid x:Name="txtFase" Grid.ColumnSpan="2" Margin="0,0,-39,0">
+        <Grid x:Name="txtFase" Grid.ColumnSpan="2" Margin="-4,0,-35,0">
             <TextBlock x:Name="TiempoInicial" HorizontalAlignment="Left" Margin="28,149,0,0" TextWrapping="Wrap" Text="Tiempo Inicial" VerticalAlignment="Top"/>
             <TextBox x:Name="txtTiempoInicial" HorizontalAlignment="Left" Height="23" Margin="28,178,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
             <TextBlock x:Name="TiempoFinal" HorizontalAlignment="Left" Margin="183,149,0,0" TextWrapping="Wrap" Text="Tiempo Final" VerticalAlignment="Top" RenderTransformOrigin="1.55,0.313"/>
@@ -29,15 +29,19 @@
             <TextBlock x:Name="lblAmplitudMaximaPositiva" HorizontalAlignment="Left" Margin="26,270,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
             <TextBlock x:Name="lblAmplitudMaximaNegativa" HorizontalAlignment="Left" Margin="26,471,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
             <TextBlock x:Name="lblAmplitudCero" HorizontalAlignment="Left" Margin="26,363,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
-            <StackPanel x:Name="PanelConfiguracion" HorizontalAlignment="Left" Height="113" Margin="44,10,0,0" VerticalAlignment="Top" Width="494"/>
+            <StackPanel x:Name="PanelConfiguracion" HorizontalAlignment="Left" Height="113" Margin="44,10,0,0" VerticalAlignment="Top" Width="695"/>
             <ComboBox x:Name="cbTipoSeñal" SelectedIndex="0" HorizontalAlignment="Left" Margin="384,243,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbTipoSeñal_SelectionChanged">
                 <ComboBoxItem>Señal Senoidal</ComboBoxItem>
                 <ComboBoxItem>Señal Rampa</ComboBoxItem>
                 <ComboBoxItem>Señal Exponencial</ComboBoxItem>
+                
             </ComboBox>
             <TextBlock HorizontalAlignment="Left" Margin="384,222,0,0" TextWrapping="Wrap" Text="Tipo de señal." VerticalAlignment="Top"/>
-            <CheckBox x:Name="CheckEscalar" Content="" HorizontalAlignment="Left" Margin="540,151,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="CheckEscalar" Content="" HorizontalAlignment="Left" Margin="543,151,0,0" VerticalAlignment="Top"/>
             <CheckBox x:Name="CheckDesplazamiento" Content="" HorizontalAlignment="Left" Margin="700,154,0,0" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="640,65,0,0" TextWrapping="Wrap" Text="Umbral" VerticalAlignment="Top"/>
+            <TextBox x:Name="txtUmbral" HorizontalAlignment="Left" Height="23" Margin="600,86,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
+            <CheckBox x:Name="CheckUmbral" Content="" HorizontalAlignment="Left" Margin="684,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="8,-5.333"/>
 
 
         </Grid>

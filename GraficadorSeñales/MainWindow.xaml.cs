@@ -73,6 +73,13 @@ namespace GraficadorSeñales
             senal.FrecuenciaMuestreo = Muestreo;
             senal.ConstruirSeñalDigital();
 
+            // Truncar
+            if ((bool)CheckUmbral.IsChecked)
+            {
+                double n = double.Parse(txtUmbral.Text);
+                senal.Truncar(n);
+            }
+
             // Escalar
             if ((bool)CheckEscalar.IsChecked)
             {
@@ -100,6 +107,8 @@ namespace GraficadorSeñales
                  }
 
             }
+
+
                     
            
 
@@ -177,18 +186,7 @@ namespace GraficadorSeñales
             }
         }
 
-        /*private void CheckedAmplitud_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (CheckAmplitud.IsSealed)
-            {
-                txtAmplitud.IsEnabled = false;
-            }
-            else {
-                txtAmplitud.IsEnabled = true;
-            }
-          
-            }
-             */
+        
 
     }
 }

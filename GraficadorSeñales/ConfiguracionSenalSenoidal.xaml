@@ -11,11 +11,11 @@
             <ColumnDefinition Width="159*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="Amplitud" HorizontalAlignment="Left" Margin="34,54,0,0" TextWrapping="Wrap" Text="Amplitud" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtAmplitud" HorizontalAlignment="Left" Height="23" Margin="34,81,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="Fase" HorizontalAlignment="Left" Margin="177,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Fa"/><Run Text="s"/><Run Text="e"/></TextBlock>
-        <TextBlock x:Name="Frecuencia" HorizontalAlignment="Left" Margin="324,52,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Frecuencia"/></TextBlock>
-        <TextBox x:Name="txtFase1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="177,83,0,0"/>
-        <TextBox x:Name="txtFrecuencia" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"  Margin="324,83,0,0"/>
+        <TextBlock x:Name="Amplitud" HorizontalAlignment="Left" Margin="-8,51,0,0" TextWrapping="Wrap" Text="Amplitud" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtAmplitud" HorizontalAlignment="Left" Height="23" Margin="-8,78,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="Fase" HorizontalAlignment="Left" Margin="135,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Fa"/><Run Text="s"/><Run Text="e"/></TextBlock>
+        <TextBlock x:Name="Frecuencia" HorizontalAlignment="Left" Margin="282,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Frecuencia"/></TextBlock>
+        <TextBox x:Name="txtFase1" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120" Margin="135,80,0,0"/>
+        <TextBox x:Name="txtFrecuencia" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"  Margin="282,80,0,0"/>
     </Grid>
 </UserControl>

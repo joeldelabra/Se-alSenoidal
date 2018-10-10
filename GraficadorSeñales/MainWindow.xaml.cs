@@ -121,8 +121,8 @@ namespace GraficadorSeñales
 
          
 
-            lblAmplitudMaximaPositiva.Text = senal.AmplitudMaxima.ToString();
-            lblAmplitudMaximaNegativa.Text = " - " + senal.AmplitudMaxima.ToString();
+            lblAmplitudMaximaPositiva.Text = senal.AmplitudMaxima.ToString("F");
+            lblAmplitudMaximaNegativa.Text = " - " + senal.AmplitudMaxima.ToString("F");
         }
 
         
@@ -186,7 +186,9 @@ namespace GraficadorSeñales
             }
         }
 
-        
+        private void cbTipoSeñal2_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
+        }
     }
 }

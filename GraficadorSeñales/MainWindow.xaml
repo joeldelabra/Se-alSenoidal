@@ -42,13 +42,15 @@
             <TextBlock HorizontalAlignment="Left" Margin="512,65,0,0" TextWrapping="Wrap" Text="Umbral" VerticalAlignment="Top"/>
             <TextBox x:Name="txtUmbral" HorizontalAlignment="Left" Height="23" Margin="472,86,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
             <CheckBox x:Name="CheckUmbral" Content="" HorizontalAlignment="Left" Margin="556,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="8,-5.333"/>
-            <Grid x:Name="txtFase_Copy" Margin="720,0,-720,0">
+            <Grid x:Name="txtFase_Copy" Margin="720,0,-91,0">
                 <TextBlock x:Name="TiempoInicial1" HorizontalAlignment="Left" Margin="28,149,0,0" TextWrapping="Wrap" Text="Tiempo Inicial" VerticalAlignment="Top"/>
                 <TextBox x:Name="txtTiempoInicial2" HorizontalAlignment="Left" Height="23" Margin="28,178,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
                 <TextBlock x:Name="TiempoFinal1" HorizontalAlignment="Left" Margin="183,149,0,0" TextWrapping="Wrap" Text="Tiempo Final" VerticalAlignment="Top" RenderTransformOrigin="1.55,0.313"/>
                 <TextBox x:Name="txtTiempoFinal2" HorizontalAlignment="Left" Height="23" Margin="172,178,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
                 <TextBlock x:Name="Muestreo1" HorizontalAlignment="Left" Margin="304,149,0,0" TextWrapping="Wrap" Text="Frecuencia de muestreo" VerticalAlignment="Top" RenderTransformOrigin="1.55,0.313"/>
-                <TextBox x:Name="txtMuestreo2" HorizontalAlignment="Left" Height="23" Margin="313,178,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="120"/>
+                
+               <TextBox x:Name="txtMuestreo2" HorizontalAlignment="Left" Height="23" Margin="313,178,0,0" TextWrapping="Wrap" Text="1000" VerticalAlignment="Top" Width="120"/>
+                <StackPanel x:Name="PanelConfiguracion2" HorizontalAlignment="Left" Height="113" Margin="718,10,0,0" VerticalAlignment="Top" Width="695"/>
                 <ComboBox x:Name="cbTipoSeñal2" SelectedIndex="0" HorizontalAlignment="Left" Margin="145,101,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbTipoSeñal2_SelectionChanged">
                     <ComboBoxItem Content="Señal Senoidal"/>
                     <ComboBoxItem Content="Señal Rampa"/>
@@ -64,11 +66,11 @@
 
 
             </Grid>
-            <TextBlock x:Name="Amplitud1_Copy" HorizontalAlignment="Left" Margin="1182,152,0,0" TextWrapping="Wrap" Text="Amplitud" VerticalAlignment="Top" RenderTransformOrigin="1.55,0.313"/>
+            <TextBlock x:Name="Amplitud2" HorizontalAlignment="Left" Margin="1182,152,0,0" TextWrapping="Wrap" Text="Amplitud" VerticalAlignment="Top" RenderTransformOrigin="1.55,0.313"/>
             <TextBox x:Name="txtAmplitud2" HorizontalAlignment="Left" Height="23" Margin="1161,180,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="120"/>
             <TextBlock x:Name="Desplazamiento2" HorizontalAlignment="Left" Margin="1004,84,0,0" TextWrapping="Wrap" Text="Desplazamiento" VerticalAlignment="Top" RenderTransformOrigin="1.55,0.313"/>
             <TextBox x:Name="txtDesplazamiento2" HorizontalAlignment="Left" Height="23" Margin="1004,108,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="120"/>
-            <StackPanel x:Name="PanelConfiguracion2" HorizontalAlignment="Left" Height="113" Margin="718,10,0,0" VerticalAlignment="Top" Width="695"/>
+           
 
 
         </Grid>
